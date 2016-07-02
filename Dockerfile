@@ -20,7 +20,7 @@ RUN apt-get -y autoremove
 RUN rm -rf /var/lib/apt/lists/*
 RUN rm -rf /tmp/*
 
-VOLUME ["/config","/data"]
+VOLUME ["/config","/unraid"]
 
 EXPOSE 6789
 
