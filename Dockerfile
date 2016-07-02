@@ -22,7 +22,7 @@ RUN rm -rf /tmp/*
 
 VOLUME ["/config","/data"]
 
-EXPOSE 32400
+EXPOSE 6789
 
 ADD ./start.sh /start.sh
 RUN chmod +x /start.sh
