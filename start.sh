@@ -16,4 +16,4 @@ chown -R nobody:users /config /opt/nzbget
 
 tail -f /config/nzbget.log
 
-./opt/nzbget/nzbget -D -c /config/nzbget.conf
+exec /opt/nzbget/nzbget -D -c /config/nzbget.conf
