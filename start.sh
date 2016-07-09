@@ -14,6 +14,8 @@ fi
 
 #chown -R nobody:users /config /opt/nzbget
 
+sed -i -e "s#\(LogFile=\).*#\1/config/nzbget.logs#g" /config/nzbget.conf
+
 tail -f /config/nzbget.log
 
-/opt/nzbget/nzbget -D -c /config/nzbget.conf
+/opt/nzbget/nzbget -D -c /config/nzbget.conf -o outputmode=log

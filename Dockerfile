@@ -13,7 +13,7 @@ RUN echo "force-unsafe-io" > /etc/dpkg/dpkg.cfg.d/02apt-speedup
 RUN echo "Acquire::http {No-Cache=True;};" > /etc/apt/apt.conf.d/no-cache
 RUN apt-get -q update
 RUN apt-get -qy dist-upgrade
-RUN apt-get install -qy unrar wget
+RUN apt-get install -qy unrar wget python
 RUN wget http://nzbget.net/download/nzbget-latest-bin-linux.run
 RUN sh nzbget-latest-bin-linux.run --destdir /opt/nzbget
 RUN apt-get -y autoremove
